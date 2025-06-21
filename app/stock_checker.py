@@ -51,8 +51,8 @@ def check_product_availability(base_url, products_list, pincode):
         try:
             product_name = driver.find_element(By.CLASS_NAME, "product-name").text
         except Exception as e:
-            product_name = "None"
             print(f"Error finding product name: {e}")
+            raise Exception(f"Error finding product name: {e}")
         try:
             print("Waiting for product availability check...")
             sold_out_box = driver.find_element(By.CLASS_NAME, "alert-danger")

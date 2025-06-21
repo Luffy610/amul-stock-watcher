@@ -29,4 +29,7 @@ jobs:
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           EMAIL_RECIPIENT: "dhruvkotwani@outlook.com"
           PYTHONPATH: .
-        run: python app/main.py
+        run: |
+          for i in 1 2 3 4 5; do
+            python stock_check.py && break || echo "Attempt $i failed, retrying in 10 seconds..." && sleep 10
+          done
