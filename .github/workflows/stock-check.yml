@@ -28,4 +28,5 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
           EMAIL_RECIPIENT: "dhruvkotwani@outlook.com"
+          PYTHONPATH: .
         run: python app/main.py
