@@ -7,7 +7,9 @@ PRODUCTS_LIST = [
     "amul-high-protein-buttermilk-200-ml-or-pack-of-30",
     "amul-high-protein-milk-250-ml-or-pack-of-8",
     "amul-chocolate-whey-protein-34-g-or-pack-of-30-sachets",
-    "amul-high-protein-paneer-400-g-or-pack-of-2"
+    "amul-high-protein-paneer-400-g-or-pack-of-2",
+    "amul-chocolate-whey-protein-gift-pack-34-g-or-pack-of-10-sachets",
+    "amul-chocolate-whey-protein-34-g-or-pack-of-60-sachets"
 ]
 PINCODE = "411036"
 
