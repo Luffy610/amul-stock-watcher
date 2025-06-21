@@ -4,7 +4,6 @@ import os
 
 BASE_URL = "https://shop.amul.com/en/product/"
 PRODUCTS_LIST = [
-    "amul-kool-protein-milkshake-or-kesar-180-ml-or-pack-of-8",
     "amul-high-protein-buttermilk-200-ml-or-pack-of-30",
     "amul-high-protein-milk-250-ml-or-pack-of-8",
     "amul-high-protein-rose-lassi-200-ml-or-pack-of-30",
