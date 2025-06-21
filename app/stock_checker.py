@@ -23,6 +23,7 @@ def check_product_availability(base_url, products_list, pincode):
         print(f"Checking availability for: {product_url}")
         driver.get(product_url)
         print(f"Page title: {driver.title}")
+        time.sleep(10)  # Wait for the page to load completely
         try:
             if not PINCODE_SET:
                 print("Pincode not set, entering pincode...")
@@ -46,7 +47,7 @@ def check_product_availability(base_url, products_list, pincode):
                     time.sleep(10)  # Wait for the page to load after clicking
         except Exception as e:
             print(f"Error while entering pincode: {e}")
-            return
+            raise Exception(f"Error while entering pincode: {e}")
         try:
             product_name = driver.find_element(By.CLASS_NAME, "product-name").text
         except Exception as e:
@@ -64,7 +65,7 @@ def check_product_availability(base_url, products_list, pincode):
             results.append(product_name)
         except Exception as e:
             print(f"Error checking product availability: {e}")
-            return
+            raise Exception(f"Error checking product availability: {e}")
         print(f"Finished checking {product_name}, waiting for 5 seconds before next check...")
         time.sleep(5)
 
