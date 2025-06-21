@@ -16,7 +16,8 @@ def send_email_notification(subject, body, email_recipient):
         msg = MIMEText(body)
         msg['Subject'] = subject
         msg['From'] = email_sender
-        msg['To'] = email_recipient
+        email_recipient = [email.strip() for email in email_recipient.split(",")]
+        msg['To'] = ", ".join(email_recipient)
 
         # Connect to the SMTP server
         with smtplib.SMTP(smtp_server, smtp_port) as server:

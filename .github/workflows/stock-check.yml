@@ -27,7 +27,7 @@ jobs:
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-          EMAIL_RECIPIENT: "dhruvkotwani@outlook.com"
+          EMAIL_RECIPIENT: "dhruvkotwani@outlook.com, sejalbudhani@outlook.com"
           PYTHONPATH: .
         run: |
           for i in 1 2 3 4 5; do
