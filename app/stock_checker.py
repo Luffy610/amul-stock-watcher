@@ -31,6 +31,7 @@ def check_product_availability(base_url, products_list, pincode):
                     EC.presence_of_element_located((By.ID, "search"))
                 )
                 print("Pincode popup detected")
+                time.sleep(5)
                 pincode_input = driver.find_element(By.ID, "search")
                 pincode_input.send_keys(pincode)
                 time.sleep(3)  # Wait for dropdown to populate

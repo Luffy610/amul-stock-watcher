@@ -17,8 +17,6 @@ def main():
     try:
         success_email_recipient = os.getenv('EMAIL_RECIPIENT')
         failure_email_recipient = os.getenv('FAILURE_RECIPIENT', 'dhruvkotwani@outlook.com')
-        if not success_email_recipient:
-            raise ValueError("Email recipient environment variables are not set.")
         available_products = check_product_availability(BASE_URL, PRODUCTS_LIST, PINCODE)
         if available_products:
             subject = "Product Availability Alert"
